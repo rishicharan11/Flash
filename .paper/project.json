@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "project": "Flash",
+  "repository": {
+    "url": "https://github.com/rishicharan11/Flash",
+    "remote": "origin",
+    "defaultBranch": "main"
+  },
+  "paper": {
+    "fileId": "01M65Y0HWJVJCC52EYZRET51GG",
+    "pageId": "p-1-0",
+    "url": "https://app.paper.design/file/01M65Y0HWJVJCC52EYZRET51GG/p-1-0"
+  },
+  "workflow": {
+    "mode": "agent-managed",
+    "paperFirst": true,
+    "explicitUserApprovalBeforePush": true,
+    "approvalScope": "exact-commit-and-destination-ref",
+    "automaticSync": false
+  },
+  "initialReview": {
+    "batch": "setup-001",
+    "title": "Paper-first repository workflow",
+    "status": "approved-for-publication"
+  },
+  "gitHooks": {
+    "manager": "husky",
+    "entrypoint": ".husky/pre-push",
+    "approvalGuard": ".githooks/pre-push",
+    "checks": [
+      "approval",
+      "production-build"
+    ],
+    "install": "npm ci"
+  }
+}
